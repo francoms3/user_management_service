@@ -42,17 +42,29 @@ A high-availability backend service built with modern concurrency and testing pr
 
 ### Local Development
 
-1. **Install dependencies**:
+1. **Create virtual environment**:
+   ```bash
+   python -m venv venv
+   ```
+
+2. **Activate virtual environment**:
+   ```bash
+   source venv/bin/activate  # On macOS/Linux
+   # or
+   .\venv\Scripts\activate   # On Windows
+   ```
+
+3. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Run the application**:
+4. **Run the application**:
    ```bash
    uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
    ```
 
-3. **Run tests**:
+5. **Run tests**:
    ```bash
    pytest tests/ -v
    ```
